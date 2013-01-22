@@ -1,0 +1,53 @@
+inherited MainForm: TMainForm
+  Left = 673
+  Top = 329
+  Caption = 'MainForm'
+  ClientHeight = 221
+  Menu = MainMenu1
+  object StatusBar1: TStatusBar[0]
+    Left = 0
+    Height = 20
+    Top = 201
+    Width = 320
+    Panels = <>
+  end
+  object MainMenu1: TMainMenu[1]
+    left = 122
+    top = 86
+    object MenuItem1: TMenuItem
+      Caption = '학생관리'
+      object mmStudentInsert: TMenuItem
+        Caption = '학생등록'
+        OnClick = mmStudentInsertClick
+      end
+      object MenuItem4: TMenuItem
+        Caption = '학생조회'
+      end
+    end
+    object MenuItem2: TMenuItem
+      Caption = '과목관리'
+      object MenuItem5: TMenuItem
+        Caption = '과목등록'
+      end
+      object MenuItem6: TMenuItem
+        Caption = '과목조회'
+      end
+    end
+    object MenuItem7: TMenuItem
+      Caption = '수강관리'
+      object MenuItem8: TMenuItem
+        Caption = '수강등록'
+      end
+      object MenuItem9: TMenuItem
+        Caption = '수강조회'
+      end
+    end
+    object MenuItem10: TMenuItem
+      Caption = '관리자'
+      object mmUser: TMenuItem
+        Caption = '사용자등록'
+        OnClick = mmUserClick
+      end
+    end
+  end
+end

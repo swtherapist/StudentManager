@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="10">
+      <Unit0>
+        <Filename Value="studentmanager.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="studentmanager"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="15" Y="10"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="baseunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="BaseForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="baseunit"/>
+        <EditorIndex Value="5"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="7"/>
+        <CursorPos X="54" Y="30"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="mainunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MainForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="mainunit"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="59" Y="52"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="datamoduleunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DM"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="datamoduleunit"/>
+        <EditorIndex Value="4"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="userunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="UserForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="userunit"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="59" Y="18"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="student_insert_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="StudentInsertForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="student_insert_unit"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="35" Y="26"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="unit2.pas"/>
+        <ComponentName Value="BaseForm1"/>
+        <HasResources Value="True"/>
+        <UnitName Value="Unit2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="20"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="unit2.lfm"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="7"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="unit1.lfm"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="student_insert_unit.lfm"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit9>
+    </Units>
+    <General>
+      <ActiveWindowIndexAtStart Value="0"/>
+    </General>
+    <JumpHistory Count="11" HistoryIndex="10">
+      <Position1>
+        <Filename Value="mainunit.pas"/>
+        <Caret Line="8" Column="8" TopLine="1"/>
+      </Position1>
+      <Position2>
+        <Filename Value="mainunit.pas"/>
+        <Caret Line="21" Column="26" TopLine="5"/>
+      </Position2>
+      <Position3>
+        <Filename Value="mainunit.pas"/>
+        <Caret Line="33" Column="1" TopLine="13"/>
+      </Position3>
+      <Position4>
+        <Filename Value="baseunit.pas"/>
+        <Caret Line="44" Column="8" TopLine="15"/>
+      </Position4>
+      <Position5>
+        <Filename Value="baseunit.pas"/>
+        <Caret Line="53" Column="1" TopLine="15"/>
+      </Position5>
+      <Position6>
+        <Filename Value="baseunit.pas"/>
+        <Caret Line="45" Column="31" TopLine="15"/>
+      </Position6>
+      <Position7>
+        <Filename Value="mainunit.pas"/>
+        <Caret Line="67" Column="71" TopLine="29"/>
+      </Position7>
+      <Position8>
+        <Filename Value="userunit.pas"/>
+        <Caret Line="31" Column="38" TopLine="1"/>
+      </Position8>
+      <Position9>
+        <Filename Value="userunit.pas"/>
+        <Caret Line="32" Column="38" TopLine="1"/>
+      </Position9>
+      <Position10>
+        <Filename Value="userunit.pas"/>
+        <Caret Line="16" Column="63" TopLine="1"/>
+      </Position10>
+      <Position11>
+        <Filename Value="userunit.pas"/>
+        <Caret Line="17" Column="67" TopLine="1"/>
+      </Position11>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>

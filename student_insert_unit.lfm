@@ -1,0 +1,5 @@
+inherited StudentInsertForm: TStudentInsertForm
+  Left = 782
+  Top = 417
+  Caption = '학생등록'
+end
