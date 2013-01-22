@@ -6,6 +6,7 @@ object BaseForm: TBaseForm
   Caption = 'BaseForm'
   Font.Height = -12
   Font.Name = '돋움체'
+  OnClose = FormClose
   OnCreate = FormCreate
   OnKeyPress = FormKeyPress
   LCLVersion = '1.0.1.3'

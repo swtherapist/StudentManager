@@ -1,4 +1,5 @@
 object DM: TDM
+  OnCreate = DataModuleCreate
   OldCreateOrder = False
   Height = 171
   HorizontalOffset = 716
@@ -7,10 +8,11 @@ object DM: TDM
   object PQConnection: TPQConnection
     Connected = False
     LoginPrompt = False
-    DatabaseName = 'postgres'
+    DatabaseName = 'Student_DB'
     KeepConnection = False
-    Password = 'ami0124'
-    UserName = 'postgres'
+    Password = 'abcd1234'
+    Transaction = SQLTransaction
+    UserName = 'student_manager'
     HostName = 'localhost'
     LogEvents = []
     left = 76
@@ -18,17 +20,21 @@ object DM: TDM
   end
   object SQLQuery: TSQLQuery
     FieldDefs = <>
+    Database = PQConnection
+    Transaction = SQLTransaction
     Params = <>
-    left = 132
+    left = 168
     top = 50
   end
   object SQLTransaction: TSQLTransaction
     Active = False
-    Action = caNone
-    left = 196
+    Action = caCommitRetaining
+    Database = PQConnection
+    left = 120
     top = 50
   end
   object SQLScript: TSQLScript
+    DataBase = PQConnection
     Directives.Strings = (
       'SET TERM'
       'COMMIT'
@@ -45,7 +51,7 @@ object DM: TDM
     UseSetTerm = True
     UseCommit = True
     UseDefines = True
-    left = 260
+    left = 216
     top = 50
   end
 end

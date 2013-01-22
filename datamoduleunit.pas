@@ -16,6 +16,7 @@ type
     SQLQuery: TSQLQuery;
     SQLScript: TSQLScript;
     SQLTransaction: TSQLTransaction;
+    procedure DataModuleCreate(Sender: TObject);
   private
     { private declarations }
   public
@@ -28,6 +29,18 @@ var
 implementation
 
 {$R *.lfm}
+
+{ TDM }
+
+procedure TDM.DataModuleCreate(Sender: TObject);
+begin
+  PQConnection.HostName     := 'localhost';
+  PQConnection.DatabaseName := 'Student_DB';
+  PQConnection.UserName     := 'student_manager';
+  PQConnection.Password     := 'abcd1234';
+  PQConnection.Connected    := True;
+  //SQLTransaction.Active     := True;
+end;
 
 end.
 

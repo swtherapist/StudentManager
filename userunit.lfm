@@ -1,17 +1,18 @@
 inherited UserForm: TUserForm
-  Left = 659
-  Height = 405
+  Left = 564
+  Height = 442
   Top = 178
-  Width = 548
+  Width = 641
   Caption = '사용자등록'
-  ClientHeight = 405
-  ClientWidth = 548
+  ClientHeight = 442
+  ClientWidth = 641
+  OnClose = nil
   OnKeyPress = FormKeyPress
   object edUserID: TLabeledEdit[0]
     Left = 88
     Height = 20
     Top = 16
-    Width = 80
+    Width = 144
     EditLabel.AnchorSideTop.Control = edUserID
     EditLabel.AnchorSideTop.Side = asrCenter
     EditLabel.AnchorSideRight.Control = edUserID
@@ -29,8 +30,8 @@ inherited UserForm: TUserForm
   object edUserID1: TLabeledEdit[1]
     Left = 88
     Height = 20
-    Top = 40
-    Width = 80
+    Top = 64
+    Width = 144
     EditLabel.AnchorSideTop.Control = edUserID1
     EditLabel.AnchorSideTop.Side = asrCenter
     EditLabel.AnchorSideRight.Control = edUserID1
@@ -38,36 +39,163 @@ inherited UserForm: TUserForm
     EditLabel.AnchorSideBottom.Side = asrBottom
     EditLabel.Left = 24
     EditLabel.Height = 13
-    EditLabel.Top = 44
+    EditLabel.Top = 68
     EditLabel.Width = 61
     EditLabel.Caption = 'PASSWORD :'
     EditLabel.ParentColor = False
     LabelPosition = lpLeft
     ParentBidiMode = False
-    TabOrder = 1
+    TabOrder = 2
   end
-  object CheckBox1: TCheckBox[2]
+  object edUserAuth: TCheckBox[2]
     Left = 88
     Height = 17
-    Top = 64
+    Top = 88
     Width = 74
     Caption = 'Authority'
-    TabOrder = 2
+    TabOrder = 3
   end
   object DBGrid1: TDBGrid[3]
     Left = 0
-    Height = 293
-    Top = 112
-    Width = 548
+    Height = 306
+    Top = 120
+    Width = 641
     Anchors = [akTop, akLeft, akRight, akBottom]
     Color = clWindow
-    Columns = <>
-    TabOrder = 3
+    Columns = <    
+      item
+        Title.Caption = 'user_id'
+        Width = 60
+        FieldName = 'user_id'
+      end    
+      item
+        Title.Caption = 'user_name'
+        Width = 200
+        FieldName = 'user_name'
+      end    
+      item
+        Title.Caption = 'user_password'
+        Width = 100
+        FieldName = 'user_password'
+      end    
+      item
+        Title.Caption = 'last_date'
+        Width = 120
+        FieldName = 'last_date'
+      end    
+      item
+        Alignment = taCenter
+        Title.Caption = 'user_auth'
+        FieldName = 'user_auth'
+      end>
+    DataSource = Datasource1
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    TabOrder = 6
     TitleFont.Height = -12
     TitleFont.Name = '돋움체'
+    OnCellClick = DBGrid1CellClick
   end
-  object Datasource1: TDatasource[4]
-    left = 313
-    top = 44
+  object btAdd: TBitBtn[4]
+    Left = 240
+    Height = 89
+    Top = 16
+    Width = 92
+    Caption = 'Add'
+    OnClick = btAddClick
+    TabOrder = 4
+  end
+  object btDelete: TBitBtn[5]
+    Left = 336
+    Height = 89
+    Top = 16
+    Width = 92
+    Caption = 'Delete'
+    OnClick = btDeleteClick
+    TabOrder = 5
+  end
+  object edUserName: TLabeledEdit[6]
+    Left = 88
+    Height = 20
+    Top = 40
+    Width = 144
+    EditLabel.AnchorSideTop.Control = edUserName
+    EditLabel.AnchorSideTop.Side = asrCenter
+    EditLabel.AnchorSideRight.Control = edUserName
+    EditLabel.AnchorSideBottom.Control = edUserName
+    EditLabel.AnchorSideBottom.Side = asrBottom
+    EditLabel.Left = 18
+    EditLabel.Height = 13
+    EditLabel.Top = 44
+    EditLabel.Width = 67
+    EditLabel.Caption = 'USER NAME :'
+    EditLabel.ParentColor = False
+    LabelPosition = lpLeft
+    TabOrder = 1
+  end
+  object btQuery: TBitBtn[7]
+    Left = 432
+    Height = 89
+    Top = 16
+    Width = 92
+    Caption = 'Query'
+    OnClick = btQueryClick
+    TabOrder = 7
+  end
+  object StatusBar1: TStatusBar[8]
+    Left = 0
+    Height = 20
+    Top = 422
+    Width = 641
+    Panels = <>
+    SimpleText = '12'
+  end
+  object Datasource1: TDatasource[9]
+    DataSet = SQLQuery1
+    left = 88
+    top = 160
+  end
+  object SQLQuery1: TSQLQuery[10]
+    IndexName = 'DEFAULT_ORDER'
+    FieldDefs = <    
+      item
+        Name = 'user_id'
+        DataType = ftString
+        Precision = -1
+        Size = 100
+      end    
+      item
+        Name = 'user_name'
+        DataType = ftString
+        Precision = -1
+        Size = 100
+      end    
+      item
+        Name = 'last_date'
+        DataType = ftDateTime
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'user_auth'
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'user_password'
+        DataType = ftString
+        Precision = -1
+        Size = 100
+      end>
+    AfterOpen = SQLQuery1AfterOpen
+    AfterScroll = SQLQuery1AfterScroll
+    Database = DM.PQConnection
+    Transaction = DM.SQLTransaction
+    SQL.Strings = (
+      'select * from TB_USER'
+    )
+    Params = <>
+    left = 40
+    top = 160
   end
 end

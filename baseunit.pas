@@ -12,6 +12,7 @@ type
   { TBaseForm }
 
   TBaseForm = class(TForm)
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure FormKeyPress(Sender: TObject; var Key: char);
   private
@@ -30,6 +31,13 @@ implementation
 {$R *.lfm}
 
 { TBaseForm }
+
+uses datamoduleunit;
+
+procedure TBaseForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+begin
+  CloseAction := caFree;
+end;
 
 procedure TBaseForm.FormCreate(Sender: TObject);
 begin
